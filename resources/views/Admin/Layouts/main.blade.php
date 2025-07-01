@@ -57,7 +57,7 @@
                             <img class="rounded-circle me-lg-2" src="{{ asset('Admin/img/user.jpg    ') }}"
                                 alt="" style="width: 40px; height: 40px;">
                             {{-- <span class="d-none d-lg-inline-flex">{{ Auth::guard('admin')->user()->name }}</span> --}}
-                            <span class="d-none d-lg-inline-flex">{{ 'Bambang Pamungkas' }}</span>
+                            <span class="d-none d-lg-inline-flex">{{ Auth::guard('admin')->user()->name }}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <form action="{{ url('/logout') }}" method="POST">

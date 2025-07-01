@@ -10,10 +10,28 @@ use illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     public function index() {
+
+        if (Auth::guard('admin')->check()) {
+            return redirect('/dashboard');
+        }
+    
+        if (Auth::guard('customer')->check()) {
+            return redirect('/');
+        }
+        
         return view('Auth.login');
     }
 
     public function auth(Request $request) {
+
+        if (Auth::guard('admin')->check()) {
+            return redirect('/dashboard');
+        }
+    
+        if (Auth::guard('customer')->check()) {
+            return redirect('/');
+        }
+        
         $credential = $request->validate([
             'email' => 'required|email:dns',
             'password' => 'required|max:15'

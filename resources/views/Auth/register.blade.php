@@ -111,6 +111,7 @@
 
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+                <a href="{{ url('/login') }}" class="btn btn-primary">Login</a>
             </div>
         </form>
     </div>

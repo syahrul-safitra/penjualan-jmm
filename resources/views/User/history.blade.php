@@ -5,15 +5,7 @@
     <section id="team" class="team section mt-5">
 
 
-        @if (session()->has('success'))
-            <div class="row">
-                <div class="col-12">
-                    <div class="alert alert-success" role="alert">
-                        {{ session('success') }}
-                    </div>
-                </div>
-            </div>
-        @endif
+
 
 
         <!-- Section Title -->
@@ -24,6 +16,16 @@
 
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            @if (session()->has('success'))
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-success" role="alert">
+                            {{ session('success') }}
+                        </div>
+                    </div>
+                </div>
+            @endif
 
             <div class="row">
                 <div class="container">

@@ -28,5 +28,15 @@ class OrderClothing extends Model
         return $this->belongsTo(Customer::class);
     }
     
+    public function scopeOrderBulanIni($query) {
+        return $query->whereYear('created_at', date('Y'))
+                ->whereMonth('created_at', date('m'))
+                ->count();
+    }
+
+    public function scopePendapatanBulanIni($query) {
+        return $query->whereYear('created_at', date('Y'))
+                ->whereMonth('created_at', date('m'));
+    }
 
 }

@@ -10,7 +10,7 @@
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Cetak Laporan</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <form action="{{ url('cetak-order') }}" method="POST">
+                    <form action="{{ url('cetak-order-product') }}" method="POST">
                         <div class="modal-body">
                             @csrf
                             <div class="d-flex justify-content-around">

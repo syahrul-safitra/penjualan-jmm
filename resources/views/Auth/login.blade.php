@@ -6,7 +6,14 @@
         <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
             <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                 <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h3 class="text-primary mx-auto text-warning"><i class="bi bi-cup-straw me-2"></i>Kopi</h3>
+
+                    <div>
+                        <h3 class="text-primary mx-auto display-6 text-info"><i class="bi bi-printer me-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-primary mx-auto text-info">Jambi Mitra Mandiri</h3>
+                    </div>
+
                 </div>
                 <form action="{{ url('login') }}" method="POST">
                     @if (session()->has('loginError'))
@@ -33,8 +40,8 @@
                             placeholder="Password" required>
                         <label for="floatingPassword">Password</label>
                     </div>
-                    <button type="submit" class="btn btn-warning py-3 w-100 mb-4">Login</button>
-                    <a href="{{ url('/register') }}" class="btn btn-warning w-100">Register</a>
+                    <button type="submit" class="btn btn-info py-3 w-100 mb-4">Login</button>
+                    <a href="{{ url('/register') }}" class="btn btn-info w-100">Register</a>
                 </form>
             </div>
         </div>

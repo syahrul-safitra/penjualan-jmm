@@ -4,15 +4,15 @@
         <a href="index.html" class="logo d-flex align-items-center me-auto">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <img src="{{ asset('User/assets/img/logo.png') }}" alt="">
-            <h1 class="sitename">FlexStart</h1>
+            <h1 class="sitename">Jambi Mitra Mandiri</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="/" class="active">Home<br></a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="/">Home<br></a></li>
+                {{-- <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#portfolio">Portfolio</a></li> --}}
                 @if (Auth::guard('customer')->check())
                     <li><a href="{{ asset('/pakaian') }}">Pakaian</a></li>
                     <li><a href="{{ asset('/produk') }}">Produk</a></li>

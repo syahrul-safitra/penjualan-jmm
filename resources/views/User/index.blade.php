@@ -113,7 +113,7 @@
     </section><!-- /Values Section -->
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section">
+    {{-- <section id="stats" class="stats section">
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -167,10 +167,10 @@
 
         </div>
 
-    </section><!-- /Stats Section -->
+    </section><!-- /Stats Section --> --}}
 
     <!-- Features Section -->
-    <section id="features" class="features section">
+    {{-- <section id="features" class="features section">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -1166,10 +1166,10 @@
 
         </div>
 
-    </section><!-- /Recent Posts Section -->
+    </section><!-- /Recent Posts Section --> --}}
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    {{-- <section id="contact" class="contact section">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -1264,5 +1264,5 @@
 
         </div>
 
-    </section><!-- /Contact Section -->
+    </section><!-- /Contact Section --> --}}
 @endsection

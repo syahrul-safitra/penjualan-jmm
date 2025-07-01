@@ -129,4 +129,13 @@ class OrderProductController extends Controller
         return back()->with('success', 'Berhasil menghapus data');
     }
 
+    public function cetak(Request $request, ) {
+        return view('Admin.OrderProduct.cetak', [
+            'data' => OrderProduct::with('product', 'customer')->whereBetween('created_at', [$request->tanggal_awal, $request->tanggal_akhir])->get(),
+            'tanggal_awal' => $request->tanggal_awal, 
+            'tanggal_akhir' => $request->tanggal_akhir
+        ]);
+
+    }
+
 }

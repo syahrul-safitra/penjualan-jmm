@@ -2,7 +2,7 @@
  <div class="sidebar pe-4 pb-3">
      <nav class="navbar bg-light navbar-light">
          <a href="index.html" class="navbar-brand mx-4 mb-3">
-             <h3 class="text-info"><i class="fa fa-hashtag me-2"></i>Caffe</h3>
+             <h3 class="text-info"><i class="fa fa-hashtag me-2"></i>JMM</h3>
          </a>
          <div class="d-flex align-items-center ms-4 mb-4">
              <div class="position-relative">
@@ -14,7 +14,7 @@
              </div>
              <div class="ms-3">
                  {{-- <h6 class="mb-0">{{ Auth::guard('admin')->user()->name }}</h6> --}}
-                 <h6 class="mb-0">{{ 'Bambang Pamungkas' }}</h6>
+                 <h6 class="mb-0">{{ Auth::guard('admin')->user()->name }}</h6>
                  <span>Admin</span>
 
              </div>
@@ -23,7 +23,7 @@
              <a href="{{ url('/dashboard') }}" class="nav-item nav-link  "><i
                      class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
              <a href="{{ url('/clothes') }}" class="nav-item nav-link {{ Request::is('clothes' ? 'active' : '') }}"><i
-                     class="bi bi-minecart me-2"></i>Pakaian</a>
+                     class="bi bi-bag-check-fill me-2"></i>Pakaian</a>
              <a href="{{ url('/product') }}" class="nav-item nav-link {{ Request::is('clothes' ? 'active' : '') }}"><i
                      class="bi bi-book me-2"></i>Product</a>
              <a href="{{ url('/order-pakaian') }}" class="nav-item nav-link "><i class="bi bi-cart4 me-2"></i>Order
