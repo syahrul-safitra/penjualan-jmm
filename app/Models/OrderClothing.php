@@ -17,7 +17,9 @@ class OrderClothing extends Model
         'total_harga', 
         'keterangan', 
         'desain', 
-        'bukti'
+        'bukti',
+        'status_dp',
+        'nominal_dp'
     ];
 
     public function cloth() {

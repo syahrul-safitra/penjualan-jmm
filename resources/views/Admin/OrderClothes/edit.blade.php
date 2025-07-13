@@ -35,7 +35,16 @@
                             </div>
                             <div class="modal-body">
 
-                                <label class="form-label">Change Status</label>
+                                <label class="form-label">Change Status & Nominal DP</label>
+
+                                <div class="form-control">
+                                    <label for="nama" class="form-check-lable">Masukan Nominal yang di DP</label>
+                                    <input type="text" class="form-check @error('nama') is-invalid @enderror"
+                                        name="nominal_dp" value="{{ @old('nama') }}" autocomplete="off" autofocus>
+                                    @error('nama')
+                                        <div class="invalid-feedback text-red">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="status" id="pending"
@@ -51,6 +60,7 @@
                                         Berhasil
                                     </label>
                                 </div>
+
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="status" id="gagal"
                                         value="gagal" @checked($order->status == 'gagal')>
@@ -134,6 +144,35 @@
                             <td style="width: 65%"><span class="badge bg-success">{{ $order->status }}</span></td>
                         @else
                             <td style="width: 65%"><span class="badge bg-danger">{{ $order->status }}</span></td>
+                        @endif
+
+                    </tr>
+                    <tr>
+                        <th scope="row" style="width: 30%">Status DP</th>
+                        <td style="width: 5%">:</td>
+                        {{-- <td style="width: 65%">{{ $order->status }}</td> --}}
+                        @if ($order->status_dp === 'dp')
+                            <td style="width: 65%"><span class="badge bg-warning">{{ $order->status_dp }}</span></td>
+                        @else
+                            <td style="width: 65%"><span class="badge bg-success">{{ 'Tidak DP' }}</span></td>
+                        @endif
+
+                    </tr>
+                    <tr>
+                        <th scope="row" style="width: 30%">Nominal DP</th>
+                        <td style="width: 5%">:</td>
+                        <td style="width: 65%">{{ 'Rp ' . number_format($order->nominal_dp, 0, ',', '.') }}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" style="width: 30%">Sisa Pembayaran dari DP</th>
+                        <td style="width: 5%">:</td>
+
+                        @if ($order->status_dp === 'dp')
+                            <td style="width: 65%">
+                                {{ 'Rp ' . number_format($order->total_harga - $order->nominal_dp, 0, ',', '.') }}</td>
+                        @else
+                            <td style="width: 65%"><span class="badge bg-success">{{ 'Tidak DP' }}</span></td>
                         @endif
 
                     </tr>

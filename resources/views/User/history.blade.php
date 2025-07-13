@@ -37,8 +37,9 @@
                                 </div>
                                 <div class="member-info">
                                     <h4>{{ $customer->name }}</h4>
-                                    <span>{{ $customer->email }}</span>
-                                    <span>{{ $customer->no_wa }}</span>
+                                    <span>{{ 'Email : ' . $customer->email }}</span>
+                                    <span>{{ 'No WA :' . $customer->no_wa }}</span>
+                                    <span>{{ 'Alamat : ' . $customer->alamat }}</span>
                                     {{-- <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut.
                                         Ipsum exercitationem iure minima enim corporis et voluptate.</p> --}}
                                 </div>

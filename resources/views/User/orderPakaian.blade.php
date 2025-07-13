@@ -159,6 +159,27 @@
                                 @enderror
                             </div>
 
+                            <div class="col-12 ">
+                                <label for="DP">Status DP</label>
+                                <br>
+                                <div class="d-flex gap-5">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="dp" name="status_dp"
+                                            id="radioDefault1" required>
+                                        <label class="form-check-label" for="radioDefault1">
+                                            DP
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="tidak_dp" name="status_dp"
+                                            id="radioDefault2">
+                                        <label class="form-check-label" for="radioDefault2">
+                                            Tidak DP
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="col-12">
                                 <label for="gambar" class="form-label">Resi Pembayaran</label>
                                 <input type="file" class="form-control" id="image2" onchange="previewImage2()"

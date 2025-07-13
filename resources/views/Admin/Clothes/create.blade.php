@@ -7,10 +7,12 @@
                 <h6 class="mb-4">Tambah Pakaian</h6>
                 <form action="{{ url('clothes') }}" method="POST" enctype="multipart/form-data">
                     @csrf
+
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama Pakaian</label>
                         <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama"
-                            id="nama" value="{{ @old('nama') }}" autocomplete="off" autofocus>
+                            value="{{ $order->nominal_dp }}" id="nama" value="{{ @old('nama') }}" autocomplete="off"
+                            autofocus>
                         @error('nama')
                             <div class="invalid-feedback text-red">{{ $message }}</div>
                         @enderror
@@ -53,6 +55,7 @@
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
                     </div>
+
 
                     <div class="mb-3">
                         <label for="gambar" class="form-label">Gambar Belakang</label>

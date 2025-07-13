@@ -121,6 +121,18 @@
                             </div>
 
                             <div class="col-12">
+                                <label for="">Status DP</label>
+                                <input type="text" class="form-control" value="{{ $orderDetail->status_dp }}"
+                                    readonly>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="">Nominal DP</label>
+                                <input type="text" class="form-control" value="{{ $orderDetail->nominal_dp }}"
+                                    readonly>
+                            </div>
+
+                            <div class="col-12">
                                 <label for="gambar" class="form-label">Desain</label>
                                 <br>
                                 <a href="{{ asset('file/' . $orderDetail->desain) }}" class="btn btn-info">Desain</a>

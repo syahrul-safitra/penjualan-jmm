@@ -75,7 +75,8 @@
                             <th scope="col">Jumlah</th>
                             <th scope="col">Total Harga</th>
                             <th scope="col">Tanggal</th>
-                            <th scope="col">Status</th>
+                            <th scope="col">Status Pembayaran</th>
+                            <th scope="col">Status DP</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -95,6 +96,12 @@
                                     <td><span class="badge bg-success">{{ $item->status }}</span></td>
                                 @else
                                     <td><span class="badge bg-danger">{{ $item->status }}</span></td>
+                                @endif
+
+                                @if ($item->status_dp == 'dp')
+                                    <td><span class="badge bg-warning">{{ $item->status_dp }}</span></td>
+                                @else
+                                    <td><span class="badge bg-success">{{ 'Tidak DP' }}</span></td>
                                 @endif
 
                                 <td>

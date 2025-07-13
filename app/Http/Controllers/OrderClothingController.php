@@ -38,7 +38,8 @@ class OrderClothingController extends Controller
             'bukti' => 'required:max:2500',
             'desain' => 'required:max:2500',
             'ukuran' => 'required', 
-            'cart_id' => 'required'
+            'cart_id' => 'required',
+            'status_dp' => 'required'
         ]);
 
         $newData = [
@@ -49,6 +50,7 @@ class OrderClothingController extends Controller
             'keterangan' => $validated['keterangan'],
             // 'bukti' => $validated['bukti'],
             // 'desain' => $validated['desain'],
+            'status_dp' => $validated['status_dp'],
             'ukuran' => $validated['ukuran']
         ];
 
@@ -111,7 +113,8 @@ class OrderClothingController extends Controller
     public function setStatus(Request $request, OrderClothing $order) {
         $validated = $request->validate([
             'status' => 'required', 
-            'bukti' => 'max:2300'
+            'bukti' => 'max:2300', 
+            'nominal_dp' => 'required'
         ]);
 
         $file = $request->file('bukti');
@@ -129,6 +132,7 @@ class OrderClothingController extends Controller
         $getStatus = $validated['status'];
 
         $order->status = $getStatus;
+        $order->nominal_dp = $validated['nominal_dp'];
 
         $order->save();
 
